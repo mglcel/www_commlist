@@ -185,6 +185,7 @@ def call_openai(client: OpenAI, model: str, system: str, user: str) -> dict:
     )
     # Parse response from chat completions API
     data = None
+    raw_content = None
     try:
         # For OpenAI chat completions with structured output
         if hasattr(resp, "parsed") and resp.parsed:
@@ -194,15 +195,40 @@ def call_openai(client: OpenAI, model: str, system: str, user: str) -> dict:
             if hasattr(message, "parsed") and message.parsed:
                 data = message.parsed
             elif hasattr(message, "content") and message.content:
-                data = json.loads(message.content)
+                raw_content = message.content
+                # Try to fix common JSON issues before parsing
+                cleaned_content = raw_content.strip()
+                if cleaned_content and not cleaned_content.endswith('}'):
+                    # If JSON appears truncated, try to find the last complete contact and close the JSON
+                    last_complete = cleaned_content.rfind('"}')
+                    if last_complete > -1:
+                        # Find the start of the incomplete contact
+                        incomplete_start = cleaned_content.rfind(',{', 0, last_complete + 2)
+                        if incomplete_start > -1:
+                            cleaned_content = cleaned_content[:incomplete_start] + ']}'
+                        else:
+                            cleaned_content = cleaned_content[:last_complete + 2] + ']}'
+
+                data = json.loads(cleaned_content)
             else:
                 raise RuntimeError("No content found in response")
         else:
             raise RuntimeError("No valid response structure found")
     except json.JSONDecodeError as e:
-        raise RuntimeError(f"Failed to parse JSON response: {e}")
+        # Try to provide more helpful error context
+        error_msg = f"Failed to parse JSON response: {e}"
+        if raw_content:
+            error_msg += f" (Response length: {len(raw_content)} chars)"
+            # Show a snippet around the error location if possible
+            if hasattr(e, 'pos') and e.pos:
+                start = max(0, e.pos - 50)
+                end = min(len(raw_content), e.pos + 50)
+                snippet = raw_content[start:end]
+                error_msg += f" Near: ...{snippet}..."
+        raise RuntimeError(error_msg)
     except Exception as e:
         raise RuntimeError(f"Failed to parse model output: {e}")
+
     if not isinstance(data, dict) or "contacts" not in data:
         raise RuntimeError("Model did not return expected JSON with 'contacts'.")
     return data
@@ -337,12 +363,13 @@ def run_for_city(client: OpenAI, model: str, city: dict, per_type: int, delay: f
     city_id = city.get("id")
     city_name = city_display(city)
 
-    for ptype in PARTNER_TYPES:
+    for i, ptype in enumerate(PARTNER_TYPES, 1):
         # Check if file already exists and skip if it does
         if file_exists(out_root, city_id, ptype):
-            print(f"Skipping {city_id}/{ptype} - file already exists")
+            print(f"  [{i}/{len(PARTNER_TYPES)}] Skipping {ptype} - file already exists")
             continue
 
+        print(f"  [{i}/{len(PARTNER_TYPES)}] Processing {ptype}...")
         need = per_type
         collected: List[Dict] = []
         attempts = 0
@@ -368,7 +395,7 @@ def run_for_city(client: OpenAI, model: str, city: dict, per_type: int, delay: f
         out_dir = os.path.join(out_root, sanitize(city_id), ptype)
         out_path = os.path.join(out_dir, "contacts.csv")
         write_csv(out_path, collected)
-        print(f"Wrote {len(collected):3d} → {out_path}")
+        print(f"    Wrote {len(collected):3d} → {out_path}")
 
 def main():
     ap = argparse.ArgumentParser(description="Generate city/type partner CSVs with OpenAI")
