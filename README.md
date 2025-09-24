@@ -34,9 +34,16 @@ The script includes 41 major cities across all continents:
 python3 populate.py
 ```
 
-### Custom Cities File
+### Specific Cities
 ```bash
-python3 populate.py --cities cities.json
+# Single city
+python3 populate.py --cities paris
+
+# Multiple cities
+python3 populate.py --cities paris london tokyo
+
+# Cities with spaces (use quotes)
+python3 populate.py --cities "new york" "san francisco"
 ```
 
 ### Custom Options
@@ -51,7 +58,7 @@ python3 populate.py --merge --merge-output all_contacts.csv
 
 ## Command Line Options
 
-- `--cities`: Path to cities JSON file (optional, uses default cities if not provided)
+- `--cities`: List of city names to process (optional, uses default cities if not provided)
 - `--out`: Output root directory (default: "out")
 - `--model`: OpenAI model to use (default: "gpt-4.1-mini")
 - `--per-type`: Number of contacts per city/type (default: 100)
@@ -120,9 +127,9 @@ The script automatically checks for existing files and skips them. This means yo
 python3 populate.py --per-type 200 --delay 0.8
 ```
 
-### Use custom cities and merge results
+### Generate contacts for specific cities and merge results
 ```bash
-python3 populate.py --cities my_cities.json --per-type 150
+python3 populate.py --cities paris london berlin --per-type 150
 python3 populate.py --merge --merge-output final_contacts.csv
 ```
 
@@ -131,23 +138,16 @@ python3 populate.py --merge --merge-output final_contacts.csv
 python3 populate.py --merge
 ```
 
-## Cities JSON Format
+## City Name Matching
 
-If using a custom cities file, use this format:
-```json
-[
-  {
-    "id": "paris_france",
-    "country": "france",
-    "map": {"language": "fr"}
-  },
-  {
-    "id": "tokyo_japan",
-    "country": "japan",
-    "map": {"language": "ja"}
-  }
-]
-```
+When specifying cities with `--cities`, the script matches city names flexibly:
+
+- **Partial matches**: "paris" matches "paris_france"
+- **Case insensitive**: "TOKYO" matches "tokyo_japan"
+- **Space/dash handling**: "new york" matches "new_york_usa"
+- **Multiple matches**: if a name matches multiple cities, all matches are included
+
+If no cities match your input, the script will show available city options.
 
 ## Performance
 

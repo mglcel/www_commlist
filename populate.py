@@ -10,7 +10,7 @@ FEATURES:
 - Enhanced prompts for better contact quality
 
 INPUTS:
-- cities file: JSON array (optional - uses default cities if not provided)
+- city names: space-separated list (optional - uses default cities if not provided)
 - OpenAI API key via environment variable
 
 OUTPUTS:
@@ -24,8 +24,9 @@ USAGE:
 # Use default cities (41 cities worldwide)
 python3 populate.py
 
-# Custom cities file
-python3 populate.py --cities cities.json
+# Process specific cities
+python3 populate.py --cities paris london tokyo
+python3 populate.py --cities "new york" "san francisco"
 
 # Merge existing files
 python3 populate.py --merge
@@ -129,9 +130,6 @@ def to_iso3(country_slug: str) -> str:
 def to_lang2(lang_code: str) -> str:
     return LANG_MAP.get(lang_code.lower(), lang_code.lower()[:2])
 
-def load_cities(path: str) -> List[dict]:
-    with open(path, "r", encoding="utf-8") as f:
-        return json.load(f)
 
 def ensure_dir(p: str) -> None:
     os.makedirs(p, exist_ok=True)
@@ -506,7 +504,7 @@ def run_for_city(client: OpenAI, model: str, city: dict, per_type: int, delay: f
 
 def main():
     ap = argparse.ArgumentParser(description="Generate city/type partner CSVs with OpenAI")
-    ap.add_argument("--cities", help="Path to cities JSON. If not provided, uses default cities list.")
+    ap.add_argument("--cities", nargs='+', help="List of city names to process. If not provided, uses default cities list.")
     ap.add_argument("--out", default="out", help="Output root directory.")
     ap.add_argument("--model", default="gpt-4o", help="OpenAI model.")
     ap.add_argument("--per-type", type=int, default=100, help="Minimum rows per city/type.")
@@ -522,9 +520,27 @@ def main():
 
     # Load cities
     if args.cities:
-        cities = load_cities(args.cities)
-        if not isinstance(cities, list):
-            print("Cities file must be a JSON array.", file=sys.stderr)
+        # Filter default cities by provided city names
+        all_cities = create_default_cities()
+        cities = []
+        provided_city_names = [name.lower().replace(' ', '_').replace('-', '_') for name in args.cities]
+
+        for city in all_cities:
+            city_id = city.get("id", "").lower()
+            # Check if city matches any of the provided names
+            for provided_name in provided_city_names:
+                if provided_name in city_id or city_id.startswith(provided_name):
+                    cities.append(city)
+                    break
+
+        if not cities:
+            print(f"No cities found matching: {', '.join(args.cities)}", file=sys.stderr)
+            print("Available cities:", file=sys.stderr)
+            all_cities = create_default_cities()
+            for city in all_cities[:10]:  # Show first 10 as examples
+                print(f"  {city.get('id', '')}", file=sys.stderr)
+            if len(all_cities) > 10:
+                print(f"  ... and {len(all_cities) - 10} more", file=sys.stderr)
             sys.exit(1)
     else:
         print("Using default cities list...")
