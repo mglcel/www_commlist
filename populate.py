@@ -174,35 +174,35 @@ def build_user_prompt(city: dict, partner_type: str, iso3: str, lang2: str) -> s
     return "\n".join(pieces)
 
 def call_openai(client: OpenAI, model: str, system: str, user: str) -> dict:
-    resp = client.responses.create(
+    resp = client.chat.completions.create(
         model=model,
-        input=[
-            {"role":"system","content":[{"type":"input_text","text":system}]},
-            {"role":"user","content":[{"type":"input_text","text":user}]},
+        messages=[
+            {"role":"system","content":system},
+            {"role":"user","content":user},
         ],
         response_format={"type":"json_schema","json_schema":JSON_SCHEMA},
         temperature=0.2,
     )
-    # SDKs expose output_text; when using json_schema many SDKs also expose parsed output
+    # Parse response from chat completions API
     data = None
     try:
-        # Some SDK versions:
-        if hasattr(resp, "output_parsed") and resp.output_parsed:
-            data = resp.output_parsed
+        # For OpenAI chat completions with structured output
+        if hasattr(resp, "parsed") and resp.parsed:
+            data = resp.parsed
+        elif hasattr(resp, "choices") and resp.choices and len(resp.choices) > 0:
+            message = resp.choices[0].message
+            if hasattr(message, "parsed") and message.parsed:
+                data = message.parsed
+            elif hasattr(message, "content") and message.content:
+                data = json.loads(message.content)
+            else:
+                raise RuntimeError("No content found in response")
         else:
-            txt = getattr(resp, "output_text", None) or ""
-            data = json.loads(txt) if txt else {}
-    except Exception:
-        # Fallback to assembling text parts if needed
-        try:
-            parts = []
-            for item in getattr(resp, "output", []) or []:
-                for c in getattr(item, "content", []) or []:
-                    if getattr(c, "type", "") == "output_text":
-                        parts.append(getattr(c, "text", ""))
-            data = json.loads("".join(parts)) if parts else {}
-        except Exception as e:
-            raise RuntimeError(f"Failed to parse model output: {e}")
+            raise RuntimeError("No valid response structure found")
+    except json.JSONDecodeError as e:
+        raise RuntimeError(f"Failed to parse JSON response: {e}")
+    except Exception as e:
+        raise RuntimeError(f"Failed to parse model output: {e}")
     if not isinstance(data, dict) or "contacts" not in data:
         raise RuntimeError("Model did not return expected JSON with 'contacts'.")
     return data
