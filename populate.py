@@ -136,7 +136,20 @@ def load_cities(path: str) -> List[dict]:
 def ensure_dir(p: str) -> None:
     os.makedirs(p, exist_ok=True)
 
+def clean_invalid_csv(file_path: str) -> None:
+    """Remove invalid CSV file to allow regeneration."""
+    if os.path.exists(file_path):
+        try:
+            os.remove(file_path)
+            print(f"    Cleaned invalid CSV: {file_path}")
+        except OSError as e:
+            print(f"    Warning: Could not remove invalid CSV {file_path}: {e}", file=sys.stderr)
+
 def write_csv(path: str, rows: List[Dict]) -> None:
+    # Clean any existing invalid file first
+    if os.path.exists(path) and not is_valid_csv_file(path):
+        clean_invalid_csv(path)
+
     ensure_dir(os.path.dirname(path))
     with open(path, "w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=CSV_HEADER)
@@ -298,12 +311,46 @@ def enforce_and_trim(rows: List[Dict], needed: int, iso3: str, lang2: str, city_
     normalized = dedupe(normalized)
     return normalized[:needed]
 
+def is_valid_csv_file(file_path: str) -> bool:
+    """Check if CSV file exists, is not empty, has proper header, and contains data rows."""
+    if not os.path.exists(file_path):
+        return False
+
+    try:
+        with open(file_path, "r", encoding="utf-8", newline="") as f:
+            # Check if file is empty
+            if os.path.getsize(file_path) == 0:
+                return False
+
+            # Check if file has proper CSV structure
+            reader = csv.DictReader(f)
+
+            # Verify header matches expected CSV_HEADER
+            if reader.fieldnames != CSV_HEADER:
+                return False
+
+            # Check if there's at least one data row
+            try:
+                first_row = next(reader)
+                # Verify the row has required fields with actual content
+                if not (first_row.get("name", "").strip() and
+                       first_row.get("type", "").strip() and
+                       (first_row.get("email", "").strip() or first_row.get("instagram", "").strip())):
+                    return False
+                return True
+            except StopIteration:
+                # No data rows
+                return False
+
+    except (IOError, csv.Error, UnicodeDecodeError):
+        return False
+
 def get_missing_types(out_root: str, city_id: str) -> List[str]:
-    """Check which partner types are missing for a city and return the list of missing types."""
+    """Check which partner types are missing or invalid for a city and return the list of missing types."""
     missing_types = []
     for partner_type in PARTNER_TYPES:
         out_path = os.path.join(out_root, sanitize(city_id), partner_type, "contacts.csv")
-        if not os.path.exists(out_path):
+        if not is_valid_csv_file(out_path):
             missing_types.append(partner_type)
     return missing_types
 
@@ -414,7 +461,19 @@ def run_for_city(client: OpenAI, model: str, city: dict, per_type: int, delay: f
         print(f"  All partner types already exist for {city_id}")
         return
 
-    print(f"  Missing types for {city_id}: {', '.join(missing_types)}")
+    # Check which files exist but are invalid (will be regenerated)
+    invalid_files = []
+    for ptype in missing_types:
+        out_path = os.path.join(out_root, sanitize(city_id), ptype, "contacts.csv")
+        if os.path.exists(out_path) and not is_valid_csv_file(out_path):
+            invalid_files.append(ptype)
+
+    if invalid_files:
+        print(f"  Invalid/empty files to regenerate for {city_id}: {', '.join(invalid_files)}")
+
+    new_files = [ptype for ptype in missing_types if ptype not in invalid_files]
+    if new_files:
+        print(f"  New types to create for {city_id}: {', '.join(new_files)}")
 
     for i, ptype in enumerate(missing_types, 1):
         print(f"  [{i}/{len(missing_types)}] Processing {ptype}...")
