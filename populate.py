@@ -374,7 +374,7 @@ def main():
     ap = argparse.ArgumentParser(description="Generate city/type partner CSVs with OpenAI")
     ap.add_argument("--cities", help="Path to cities JSON. If not provided, uses default cities list.")
     ap.add_argument("--out", default="out", help="Output root directory.")
-    ap.add_argument("--model", default="gpt-4.1-mini", help="OpenAI model.")
+    ap.add_argument("--model", default="gpt-4o", help="OpenAI model.")
     ap.add_argument("--per-type", type=int, default=100, help="Minimum rows per city/type.")
     ap.add_argument("--delay", type=float, default=0.6, help="Seconds between API calls.")
     ap.add_argument("--merge", action="store_true", help="Merge all existing CSV files into one.")
