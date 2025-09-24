@@ -161,17 +161,57 @@ def city_display(city_obj: dict) -> str:
     name = cid.split("_")[0] if "_" in cid else cid
     return name.replace("-", " ").replace(".", " ").replace("/", " ").title()
 
+#def build_user_prompt(city: dict, partner_type: str, iso3: str, lang2: str) -> str:
+#    pieces = [
+#        f"Task: Propose at least 100 '{partner_type}' contacts in or strongly tied to {city_display(city)}.",
+#        "They must be plausible relays for WorldWideWaves announcements on climate, peace, nature, or geopolitics.",
+#        "Return only JSON per the schema. Use the provided codes exactly for 'country' and 'language'.",
+#        f"City metadata: id={city.get('id')}, country_slug={city.get('country')}, tz={city.get('timeZone')}, "
+#        f"instagramAccount={city.get('instagramAccount')}, hashtag={city.get('instagramHashtag')}.",
+#        f"Hard constraints: country={iso3}, language={lang2}, type={partner_type}.",
+#        "If unsure about an email, set email = null and prefer instagram."
+#    ]
+#    return "\n".join(pieces)
+
 def build_user_prompt(city: dict, partner_type: str, iso3: str, lang2: str) -> str:
+    name = city.get("id","").replace("_"," ").title()
     pieces = [
-        f"Task: Propose at least 100 '{partner_type}' contacts in or strongly tied to {city_display(city)}.",
-        "They must be plausible relays for WorldWideWaves announcements on climate, peace, nature, or geopolitics.",
-        "Return only JSON per the schema. Use the provided codes exactly for 'country' and 'language'.",
+        f"Task: Propose at least 100 '{partner_type}' contacts in or strongly tied to {name}.",
+        "",
+        "Context — WorldWideWaves (WWW):",
+        "- A synchronized, city-by-city social 'wave' amplifying messages on climate, peace/war prevention, nature protection, and geopolitics.",
+        "- Each city has a fixed local date/time window, partners reshare WWW posts during that window.",
+        "- Goal: fast, broad relay to local audiences; civil and lawful.",
+        "",
+        "Partner selection criteria:",
+        "- Must be credible and locally relevant to the city; national/regional actors allowed if they have strong influence in the city.",
+        "- Clear topical alignment with at least one: climate, peace/war prevention, nature/biodiversity, geopolitics/international affairs.",
+        "- Instagram presence is preferred; if email is unknown, set email=null and provide an Instagram handle.",
+        "- Favor accounts active recently and with real-world footprint (organizations, programs, shows, bylines). No minors, hate/extremist groups, or spam.",
+        "- Seek diversity across communities, gender, and subtopics; mix institutions and individuals.",
+        "",
+        "Output requirements:",
+        "- Return ONLY JSON per the provided schema.",
+        "- Use these exact codes: country=ISO-3, language=ISO-2.",
+        "- Every item: type MUST equal the requested partner_type.",
+        "- Every item MUST include either a valid email OR a valid Instagram handle.",
+        "- Avoid duplicates by email or Instagram within this response.",
+        "- Keep notes short (≤12 words) explaining local relevance or role.",
+        "",
+        "Field guidance:",
+        "- name: public display name.",
+        "- email: only if clearly public; do NOT invent. Else null.",
+        "- instagram: '@handle' without URL if available, else null.",
+        "- organization: employer/show/org for people; brand/org for institutions.",
+        "- city: human city name.",
+        "- notes: e.g., 'Leads city biodiversity NGO', 'Hosts top climate podcast'.",
+        "",
         f"City metadata: id={city.get('id')}, country_slug={city.get('country')}, tz={city.get('timeZone')}, "
         f"instagramAccount={city.get('instagramAccount')}, hashtag={city.get('instagramHashtag')}.",
         f"Hard constraints: country={iso3}, language={lang2}, type={partner_type}.",
-        "If unsure about an email, set email = null and prefer instagram."
+        "If unsure about an email, set email=null and prefer instagram.",
     ]
-    return "\n".join(pieces)
+    return '\n'.join(pieces)
 
 def call_openai(client: OpenAI, model: str, system: str, user: str) -> dict:
     resp = client.chat.completions.create(
@@ -258,10 +298,14 @@ def enforce_and_trim(rows: List[Dict], needed: int, iso3: str, lang2: str, city_
     normalized = dedupe(normalized)
     return normalized[:needed]
 
-def file_exists(out_root: str, city_id: str, partner_type: str) -> bool:
-    """Check if the CSV file already exists for a city/type combination."""
-    out_path = os.path.join(out_root, sanitize(city_id), partner_type, "contacts.csv")
-    return os.path.exists(out_path)
+def get_missing_types(out_root: str, city_id: str) -> List[str]:
+    """Check which partner types are missing for a city and return the list of missing types."""
+    missing_types = []
+    for partner_type in PARTNER_TYPES:
+        out_path = os.path.join(out_root, sanitize(city_id), partner_type, "contacts.csv")
+        if not os.path.exists(out_path):
+            missing_types.append(partner_type)
+    return missing_types
 
 def create_default_cities() -> List[dict]:
     """Create city objects from default city list with inferred country and language."""
@@ -363,13 +407,17 @@ def run_for_city(client: OpenAI, model: str, city: dict, per_type: int, delay: f
     city_id = city.get("id")
     city_name = city_display(city)
 
-    for i, ptype in enumerate(PARTNER_TYPES, 1):
-        # Check if file already exists and skip if it does
-        if file_exists(out_root, city_id, ptype):
-            print(f"  [{i}/{len(PARTNER_TYPES)}] Skipping {ptype} - file already exists")
-            continue
+    # Get missing partner types for this city
+    missing_types = get_missing_types(out_root, city_id)
 
-        print(f"  [{i}/{len(PARTNER_TYPES)}] Processing {ptype}...")
+    if not missing_types:
+        print(f"  All partner types already exist for {city_id}")
+        return
+
+    print(f"  Missing types for {city_id}: {', '.join(missing_types)}")
+
+    for i, ptype in enumerate(missing_types, 1):
+        print(f"  [{i}/{len(missing_types)}] Processing {ptype}...")
         need = per_type
         collected: List[Dict] = []
         attempts = 0
