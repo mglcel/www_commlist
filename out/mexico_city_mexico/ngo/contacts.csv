@@ -1,0 +1,101 @@
+name,email,country,language,city,instagram,phone,organization,type,notes
+Greenpeace México,,CIT,en,Mexico,@greenpeacemx,,,ngo,Environmental protection and climate action.
+WWF México,,CIT,en,Mexico,@wwfmexico,,,ngo,Biodiversity conservation and climate change.
+Amigos de Sian Ka'an,,CIT,en,Mexico,@amigosdesiankaan,,,ngo,Conservation of natural resources.
+Centro Mexicano de Derecho Ambiental (CEMDA),,CIT,en,Mexico,@cemda_ac,,,ngo,Environmental law and policy advocacy.
+Pronatura México,,CIT,en,Mexico,@pronaturamexico,,,ngo,Nature conservation and sustainable development.
+Fondo Mexicano para la Conservación de la Naturaleza,,CIT,en,Mexico,@fmcn_mx,,,ngo,Funding for conservation projects.
+Reforestamos México,,CIT,en,Mexico,@reforestamos,,,ngo,Forest conservation and reforestation.
+Conabio,,CIT,en,Mexico,@conabio,,,ngo,Biodiversity information and conservation.
+Red de Acción por el Agua,,CIT,en,Mexico,@redaccionagua,,,ngo,Water conservation and management.
+El Poder del Consumidor,,CIT,en,Mexico,@elpoderdelconsumidor,,,ngo,Consumer rights and environmental health.
+Fundación Azteca,,CIT,en,Mexico,@fundacionazteca,,,ngo,Social and environmental projects.
+Fundación Carlos Slim,,CIT,en,Mexico,@fundacionslim,,,ngo,"Health, education, and environment."
+Fundación Grupo México,,CIT,en,Mexico,@fundaciongmx,,,ngo,Community development and environment.
+Fundación Harp Helú,,CIT,en,Mexico,@fundacionharphelu,,,ngo,Cultural and environmental projects.
+Fundación Telmex Telcel,,CIT,en,Mexico,@fundaciontelmextelcel,,,ngo,Education and environmental initiatives.
+Fundación Xochitla,,CIT,en,Mexico,@xochitla,,,ngo,Environmental education and conservation.
+Fundación Tlaloc,,CIT,en,Mexico,@fundaciontlaloc,,,ngo,Sustainable development and environment.
+Fundación Merced,,CIT,en,Mexico,@fundacionmerced,,,ngo,Social and environmental projects.
+Fundación Quiera,,CIT,en,Mexico,@fundacionquiera,,,ngo,Social development and environment.
+Fundación Comunitaria Malinalco,,CIT,en,Mexico,@fcmalinalco,,,ngo,Community development and conservation.
+Fundación Comunitaria Puebla,,CIT,en,Mexico,@fcpuebla,,,ngo,Community development and environment.
+Fundación Comunitaria Oaxaca,,CIT,en,Mexico,@fcoaxaca,,,ngo,Community development and conservation.
+Fundación Comunitaria Veracruz,,CIT,en,Mexico,@fcveracruz,,,ngo,Community development and environment.
+Fundación Comunitaria Yucatán,,CIT,en,Mexico,@fcyucatan,,,ngo,Community development and conservation.
+Fundación Comunitaria Sonora,,CIT,en,Mexico,@fcsonora,,,ngo,Community development and environment.
+Fundación Comunitaria Baja California,,CIT,en,Mexico,@fcbajacalifornia,,,ngo,Community development and conservation.
+Fundación Comunitaria Chihuahua,,CIT,en,Mexico,@fcchihuahua,,,ngo,Community development and environment.
+Fundación Comunitaria Jalisco,,CIT,en,Mexico,@fcjalisco,,,ngo,Community development and conservation.
+Fundación Comunitaria Sinaloa,,CIT,en,Mexico,@fcsinaloa,,,ngo,Community development and environment.
+Fundación Comunitaria Tabasco,,CIT,en,Mexico,@fctabasco,,,ngo,Community development and conservation.
+Fundación Comunitaria Tamaulipas,,CIT,en,Mexico,@fctamaulipas,,,ngo,Community development and environment.
+Fundación Comunitaria Zacatecas,,CIT,en,Mexico,@fczacatecas,,,ngo,Community development and conservation.
+Fundación Comunitaria Durango,,CIT,en,Mexico,@fcdurango,,,ngo,Community development and environment.
+Fundación Comunitaria Coahuila,,CIT,en,Mexico,@fccoahuila,,,ngo,Community development and conservation.
+Fundación Comunitaria Nuevo León,,CIT,en,Mexico,@fcnuevoleon,,,ngo,Community development and environment.
+Fundación Comunitaria Querétaro,,CIT,en,Mexico,@fcqueretaro,,,ngo,Community development and conservation.
+Fundación Comunitaria San Luis Potosí,,CIT,en,Mexico,@fcsanluispotosi,,,ngo,Community development and environment.
+Fundación Comunitaria Hidalgo,,CIT,en,Mexico,@fchidalgo,,,ngo,Community development and conservation.
+Fundación Comunitaria Morelos,,CIT,en,Mexico,@fcmorelos,,,ngo,Community development and environment.
+Fundación Comunitaria Michoacán,,CIT,en,Mexico,@fcmichoacan,,,ngo,Community development and conservation.
+Fundación Comunitaria Guerrero,,CIT,en,Mexico,@fcguerrero,,,ngo,Community development and environment.
+Fundación Comunitaria Nayarit,,CIT,en,Mexico,@fcnayarit,,,ngo,Community development and conservation.
+Fundación Comunitaria Colima,,CIT,en,Mexico,@fccolima,,,ngo,Community development and environment.
+Fundación Comunitaria Campeche,,CIT,en,Mexico,@fccampeche,,,ngo,Community development and conservation.
+Fundación Comunitaria Quintana Roo,,CIT,en,Mexico,@fcquintanaroo,,,ngo,Community development and environment.
+Fundación Comunitaria Chiapas,,CIT,en,Mexico,@fcchiapas,,,ngo,Community development and conservation.
+Fundación Comunitaria Tlaxcala,,CIT,en,Mexico,@fctlaxcala,,,ngo,Community development and environment.
+Fundación Comunitaria Aguascalientes,,CIT,en,Mexico,@fcaguascalientes,,,ngo,Community development and conservation.
+Fundación Comunitaria Baja California Sur,,CIT,en,Mexico,@fcbajacaliforniasur,,,ngo,Community development and environment.
+Fundación Comunitaria Guanajuato,,CIT,en,Mexico,@fcguanajuato,,,ngo,Community development and conservation.
+Fundación Comunitaria Puebla-Tlaxcala,,CIT,en,Mexico,@fcpueblatlaxcala,,,ngo,Community development and environment.
+Fundación Comunitaria Veracruz-Boca del Río,,CIT,en,Mexico,@fcveracruzbocadelrio,,,ngo,Community development and conservation.
+Fundación Comunitaria Yucatán-Mérida,,CIT,en,Mexico,@fcyucatanmerida,,,ngo,Community development and environment.
+Fundación Comunitaria Sonora-Hermosillo,,CIT,en,Mexico,@fcsonorahermosillo,,,ngo,Community development and conservation.
+Fundación Comunitaria Baja California-Tijuana,,CIT,en,Mexico,@fcbajacaliforniatijuana,,,ngo,Community development and environment.
+Fundación Comunitaria Chihuahua-Ciudad Juárez,,CIT,en,Mexico,@fcchihuahuaciudadjuarez,,,ngo,Community development and conservation.
+Fundación Comunitaria Jalisco-Guadalajara,,CIT,en,Mexico,@fcjalisco_guadalajara,,,ngo,Community development and environment.
+Fundación Comunitaria Sinaloa-Culiacán,,CIT,en,Mexico,@fcsinaloaculiacan,,,ngo,Community development and conservation.
+Fundación Comunitaria Tabasco-Villahermosa,,CIT,en,Mexico,@fctabascovillahermosa,,,ngo,Community development and environment.
+Fundación Comunitaria Tamaulipas-Reynosa,,CIT,en,Mexico,@fctamaulipasreynosa,,,ngo,Community development and conservation.
+Fundación Comunitaria Zacatecas-Zacatecas,,CIT,en,Mexico,@fczacatecaszacatecas,,,ngo,Community development and environment.
+Fundación Comunitaria Durango-Durango,,CIT,en,Mexico,@fcdurangodurango,,,ngo,Community development and conservation.
+Fundación Comunitaria Coahuila-Saltillo,,CIT,en,Mexico,@fccoahuilasaltillo,,,ngo,Community development and environment.
+Fundación Comunitaria Nuevo León-Monterrey,,CIT,en,Mexico,@fcnuevoleonmonterrey,,,ngo,Community development and conservation.
+Fundación Comunitaria Querétaro-Santiago de Querétaro,,CIT,en,Mexico,@fcqueretarosantiagodequeretaro,,,ngo,Community development and environment.
+Fundación Comunitaria San Luis Potosí-San Luis Potosí,,CIT,en,Mexico,@fcsanluispotosisanluispotosi,,,ngo,Community development and conservation.
+Fundación Comunitaria Hidalgo-Pachuca,,CIT,en,Mexico,@fchidalgopachuca,,,ngo,Community development and environment.
+Fundación Comunitaria Morelos-Cuernavaca,,CIT,en,Mexico,@fcmoreloscuernavaca,,,ngo,Community development and conservation.
+Fundación Comunitaria Michoacán-Morelia,,CIT,en,Mexico,@fcmichoacanmorelia,,,ngo,Community development and environment.
+Fundación Comunitaria Guerrero-Acapulco,,CIT,en,Mexico,@fcguerreroacapulco,,,ngo,Community development and conservation.
+Fundación Comunitaria Nayarit-Tepic,,CIT,en,Mexico,@fcnayarittepic,,,ngo,Community development and environment.
+Fundación Comunitaria Colima-Colima,,CIT,en,Mexico,@fccolimacolima,,,ngo,Community development and conservation.
+Fundación Comunitaria Campeche-Campeche,,CIT,en,Mexico,@fccampechecampeche,,,ngo,Community development and environment.
+Fundación Comunitaria Quintana Roo-Cancún,,CIT,en,Mexico,@fcquintanaroocancun,,,ngo,Community development and conservation.
+Fundación Comunitaria Chiapas-Tuxtla Gutiérrez,,CIT,en,Mexico,@fcchiapastuxtlagutierrez,,,ngo,Community development and environment.
+Fundación Comunitaria Tlaxcala-Tlaxcala,,CIT,en,Mexico,@fctlaxcalatlaxcala,,,ngo,Community development and conservation.
+Fundación Comunitaria Aguascalientes-Aguascalientes,,CIT,en,Mexico,@fcaguascalientesaguascalientes,,,ngo,Community development and environment.
+Fundación Comunitaria Baja California Sur-La Paz,,CIT,en,Mexico,@fcbajacaliforniasurlapaz,,,ngo,Community development and conservation.
+Fundación Comunitaria Guanajuato-León,,CIT,en,Mexico,@fcguanajuatoleon,,,ngo,Community development and environment.
+Fundación Comunitaria Puebla-Tlaxcala-Puebla,,CIT,en,Mexico,@fcpueblatlaxcalapuebla,,,ngo,Community development and conservation.
+Fundación Comunitaria Veracruz-Boca del Río-Veracruz,,CIT,en,Mexico,@fcveracruzbocadelrioveracruz,,,ngo,Community development and environment.
+Fundación Comunitaria Yucatán-Mérida-Mérida,,CIT,en,Mexico,@fcyucatanmeridamerida,,,ngo,Community development and conservation.
+Fundación Comunitaria Sonora-Hermosillo-Hermosillo,,CIT,en,Mexico,@fcsonorahermosillohermosillo,,,ngo,Community development and environment.
+Fundación Comunitaria Baja California-Tijuana-Tijuana,,CIT,en,Mexico,@fcbajacaliforniatijuanatijuana,,,ngo,Community development and conservation.
+Fundación Comunitaria Chihuahua-Ciudad Juárez-Ciudad Juárez,,CIT,en,Mexico,@fcchihuahuaciudadjuarezciudadjuarez,,,ngo,Community development and environment.
+Fundación Comunitaria Jalisco-Guadalajara-Guadalajara,,CIT,en,Mexico,@fcjalisco_guadalajaraguadalajara,,,ngo,Community development and conservation.
+Fundación Comunitaria Sinaloa-Culiacán-Culiacán,,CIT,en,Mexico,@fcsinaloaculiacanculiacan,,,ngo,Community development and environment.
+Fundación Comunitaria Tabasco-Villahermosa-Villahermosa,,CIT,en,Mexico,@fctabascovillahermosavillahermosa,,,ngo,Community development and conservation.
+Fundación Comunitaria Tamaulipas-Reynosa-Reynosa,,CIT,en,Mexico,@fctamaulipasreynosareynosa,,,ngo,Community development and environment.
+Fundación Comunitaria Zacatecas-Zacatecas-Zacatecas,,CIT,en,Mexico,@fczacatecaszacatecaszacatecas,,,ngo,Community development and conservation.
+Fundación Comunitaria Durango-Durango-Durango,,CIT,en,Mexico,@fcdurangodurangodurango,,,ngo,Community development and environment.
+Fundación Comunitaria Coahuila-Saltillo-Saltillo,,CIT,en,Mexico,@fccoahuilasaltillosaltillo,,,ngo,Community development and conservation.
+Fundación Comunitaria Nuevo León-Monterrey-Monterrey,,CIT,en,Mexico,@fcnuevoleonmonterreymonterrey,,,ngo,Community development and environment.
+Fundación Comunitaria Querétaro-Santiago de Querétaro-Santiago de Querétaro,,CIT,en,Mexico,@fcqueretarosantiagodequeretarosantiagodequeretaro,,,ngo,Community development and conservation.
+Fundación Comunitaria San Luis Potosí-San Luis Potosí-San Luis Potosí,,CIT,en,Mexico,@fcsanluispotosisanluispotosisanluispotosi,,,ngo,Community development and environment.
+Fundación Comunitaria Hidalgo-Pachuca-Pachuca,,CIT,en,Mexico,@fchidalgopachucapachuca,,,ngo,Community development and conservation.
+Fundación Comunitaria Morelos-Cuernavaca-Cuernavaca,,CIT,en,Mexico,@fcmoreloscuernavacacuernavaca,,,ngo,Community development and environment.
+Fundación Comunitaria Michoacán-Morelia-Morelia,,CIT,en,Mexico,@fcmichoacanmoreliamorelia,,,ngo,Community development and conservation.
+Fundación Comunitaria Guerrero-Acapulco-Acapulco,,CIT,en,Mexico,@fcguerreroacapulcoacapulco,,,ngo,Community development and environment.
+Fundación Comunitaria Nayarit-Tepic-Tepic,,CIT,en,Mexico,@fcnayarittepictepic,,,ngo,Community development and conservation.

@@ -197,7 +197,7 @@ def build_user_prompt(city: dict, partner_type: str, iso3: str, lang2: str) -> s
         "Partner selection criteria:",
         "- Must be credible and locally relevant to the city; national/regional actors allowed if they have strong influence in the city.",
         "- Clear topical alignment with at least one: climate, peace/war prevention, nature/biodiversity, geopolitics/international affairs.",
-        "- Instagram presence is preferred; if email is unknown, set email=null and provide an Instagram handle.",
+        "- If email is unknown, set email=null and provide an Instagram handle.",
         "- Favor accounts active recently and with real-world footprint (organizations, programs, shows, bylines). No minors, hate/extremist groups, or spam.",
         "- Seek diversity across communities, gender, and subtopics; mix institutions and individuals.",
         "",
