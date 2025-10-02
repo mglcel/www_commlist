@@ -15,7 +15,7 @@ INPUTS:
 
 OUTPUTS:
 - ./out/<city_id>/<type>/contacts.csv
-  header: name,email,country,language,city,instagram,phone,organization,type,notes
+  header: name,email,country,language,city,instagram,twitter,phone,organization,type,notes
 
 AUTH:
 - export OPENAI_API_KEY=your_key_here
@@ -69,7 +69,7 @@ LANG_MAP = {
     "hi":"hi","id":"id","th":"th","ja":"ja","ko":"ko","zh":"zh","ph":"tl","fa":"fa","ur":"ur","tl":"tl"
 }
 
-CSV_HEADER = ["name","email","country","language","city","instagram","phone","organization","type","notes"]
+CSV_HEADER = ["name","email","country","language","city","instagram","twitter","phone","organization","type","notes"]
 
 JSON_SCHEMA = {
     "name": "contacts_payload",
@@ -89,6 +89,7 @@ JSON_SCHEMA = {
                         "language":{"type":"string"},       # ISO-2 you provide
                         "city":{"type":"string"},           # free text city
                         "instagram":{"type":["string","null"]},
+                        "twitter":{"type":["string","null"]},
                         "phone":{"type":["string","null"]},
                         "organization":{"type":["string","null"]},
                         "type":{"type":"string","enum": PARTNER_TYPES},
@@ -113,6 +114,7 @@ SYSTEM = (
     "Rules:\n"
     "- Do not invent emails. Only include an email if clearly public; otherwise leave it null and prefer Instagram handle.\n"
     "- Use Instagram handles or official org accounts when available. If neither exists, leave instagram null.\n"
+    "- Include Twitter/X handles when available (format: @username without URL). If not found, leave twitter null.\n"
     "- Avoid duplicates by email or instagram within a single response.\n"
     "- Prefer accounts relevant to the specified city. Include national partners if they have significant influence or presence in the region.\n"
     "- For national organizations, include those with local chapters, regional offices, or strong ties to the city.\n"
@@ -213,6 +215,7 @@ def build_user_prompt(city: dict, partner_type: str, iso3: str, lang2: str) -> s
         "- name: public display name.",
         "- email: only if clearly public; do NOT invent. Else null.",
         "- instagram: '@handle' without URL if available, else null.",
+        "- twitter: '@handle' without URL if available, else null.",
         "- organization: employer/show/org for people; brand/org for institutions.",
         "- city: human city name.",
         "- notes: e.g., 'Leads city biodiversity NGO', 'Hosts top climate podcast'.",
@@ -294,6 +297,7 @@ def enforce_and_trim(rows: List[Dict], needed: int, iso3: str, lang2: str, city_
             "language": lang2,
             "city": city_name,
             "instagram": (r.get("instagram") or None),
+            "twitter": (r.get("twitter") or None),
             "phone": (r.get("phone") or None),
             "organization": (r.get("organization") or None),
             "type": partner_type,
@@ -502,6 +506,140 @@ def run_for_city(client: OpenAI, model: str, city: dict, per_type: int, delay: f
         write_csv(out_path, collected)
         print(f"    Wrote {len(collected):3d} → {out_path}")
 
+def find_missing_twitter(client: OpenAI, model: str, out_root: str, batch_size: int = 20, delay: float = 0.6):
+    """Find missing Twitter accounts for all people in existing lists."""
+    print("Scanning for contacts missing Twitter accounts...")
+
+    contacts_needing_twitter = []
+    file_contact_map = {}  # Track which file each contact came from
+
+    # Scan all CSV files
+    for root, dirs, files in os.walk(out_root):
+        if "contacts.csv" in files:
+            csv_path = os.path.join(root, "contacts.csv")
+            try:
+                with open(csv_path, "r", encoding="utf-8", newline="") as f:
+                    reader = csv.DictReader(f)
+                    for idx, row in enumerate(reader):
+                        # Only process if twitter is missing
+                        if not (row.get("twitter") or "").strip():
+                            contact_key = (csv_path, idx)
+                            contacts_needing_twitter.append({
+                                "name": row.get("name", ""),
+                                "organization": row.get("organization", ""),
+                                "instagram": row.get("instagram", ""),
+                                "type": row.get("type", ""),
+                                "city": row.get("city", ""),
+                                "row": row,
+                                "file": csv_path,
+                                "index": idx
+                            })
+                            file_contact_map[contact_key] = row
+            except Exception as e:
+                print(f"Error reading {csv_path}: {e}", file=sys.stderr)
+
+    total = len(contacts_needing_twitter)
+    print(f"Found {total} contacts missing Twitter accounts")
+
+    if total == 0:
+        print("All contacts already have Twitter accounts or are marked as not_found")
+        return
+
+    # Process in batches to limit API calls
+    updated_count = 0
+    not_found_count = 0
+
+    for batch_start in range(0, total, batch_size):
+        batch = contacts_needing_twitter[batch_start:batch_start + batch_size]
+        batch_end = min(batch_start + batch_size, total)
+
+        print(f"Processing batch {batch_start//batch_size + 1} ({batch_start+1}-{batch_end}/{total})...")
+
+        # Build batch prompt
+        contact_list = []
+        for i, contact in enumerate(batch, 1):
+            entry = f"{i}. {contact['name']}"
+            if contact['organization']:
+                entry += f" ({contact['organization']})"
+            if contact['instagram']:
+                entry += f" - Instagram: {contact['instagram']}"
+            entry += f" - Type: {contact['type']}, City: {contact['city']}"
+            contact_list.append(entry)
+
+        prompt = (
+            "Task: Find Twitter/X handles for the following contacts. Return ONLY a JSON array.\n\n"
+            "Contacts:\n" + "\n".join(contact_list) + "\n\n"
+            "Return format: [{\"index\": 1, \"twitter\": \"@username\" or \"not_found\"}, ...]\n"
+            "Rules:\n"
+            "- index: matches the number in the contact list above\n"
+            "- twitter: the Twitter/X handle with @ symbol, or exactly \"not_found\" if no account exists\n"
+            "- Only include verified or clearly identifiable accounts\n"
+            "- Return all indices from the list above\n"
+        )
+
+        try:
+            # Call OpenAI without structured output (simpler for this task)
+            resp = client.chat.completions.create(
+                model=model,
+                messages=[
+                    {"role": "system", "content": "You are a research assistant. Return only valid JSON arrays."},
+                    {"role": "user", "content": prompt}
+                ],
+                temperature=0.1,
+            )
+
+            result_text = resp.choices[0].message.content.strip()
+            # Clean up markdown code blocks if present
+            if result_text.startswith("```"):
+                result_text = result_text.split("```")[1]
+                if result_text.startswith("json"):
+                    result_text = result_text[4:].strip()
+
+            results = json.loads(result_text)
+
+            # Update contacts with found Twitter handles
+            for result in results:
+                idx = result.get("index", 0) - 1  # Convert to 0-based
+                if 0 <= idx < len(batch):
+                    twitter_handle = result.get("twitter", "").strip()
+                    contact = batch[idx]
+
+                    if twitter_handle and twitter_handle != "not_found":
+                        contact["row"]["twitter"] = twitter_handle
+                        updated_count += 1
+                    else:
+                        contact["row"]["twitter"] = "not_found"
+                        not_found_count += 1
+
+            # Write updates back to files
+            files_to_update = {}
+            for contact in batch:
+                csv_path = contact["file"]
+                if csv_path not in files_to_update:
+                    # Read entire file
+                    with open(csv_path, "r", encoding="utf-8", newline="") as f:
+                        reader = csv.DictReader(f)
+                        files_to_update[csv_path] = list(reader)
+
+                # Update the specific row
+                files_to_update[csv_path][contact["index"]] = contact["row"]
+
+            # Write back updated files
+            for csv_path, rows in files_to_update.items():
+                with open(csv_path, "w", encoding="utf-8", newline="") as f:
+                    writer = csv.DictWriter(f, fieldnames=CSV_HEADER)
+                    writer.writeheader()
+                    writer.writerows(rows)
+
+            print(f"  Batch complete: {updated_count} found, {not_found_count} not found so far")
+
+        except Exception as e:
+            print(f"Error processing batch: {e}", file=sys.stderr)
+
+        time.sleep(delay)
+
+    print(f"\nCompleted: {updated_count} Twitter accounts found, {not_found_count} marked as not_found")
+
 def main():
     ap = argparse.ArgumentParser(description="Generate city/type partner CSVs with OpenAI")
     ap.add_argument("--cities", nargs='+', help="List of city names to process. If not provided, uses default cities list.")
@@ -511,11 +649,19 @@ def main():
     ap.add_argument("--delay", type=float, default=0.6, help="Seconds between API calls.")
     ap.add_argument("--merge", action="store_true", help="Merge all existing CSV files into one.")
     ap.add_argument("--merge-output", default="merged_contacts.csv", help="Output file for merged results.")
+    ap.add_argument("--find-twitter", action="store_true", help="Find missing Twitter accounts for existing contacts.")
+    ap.add_argument("--batch-size", type=int, default=20, help="Number of contacts to process per API call when finding Twitter accounts.")
     args = ap.parse_args()
 
     # If merge flag is set, just merge existing files and exit
     if args.merge:
         merge_csvs(args.out, args.merge_output)
+        return
+
+    # If find-twitter flag is set, find missing Twitter accounts and exit
+    if args.find_twitter:
+        client = OpenAI()
+        find_missing_twitter(client, args.model, args.out, args.batch_size, args.delay)
         return
 
     # Load cities

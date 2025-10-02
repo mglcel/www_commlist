@@ -60,11 +60,13 @@ python3 populate.py --merge --merge-output all_contacts.csv
 
 - `--cities`: List of city names to process (optional, uses default cities if not provided)
 - `--out`: Output root directory (default: "out")
-- `--model`: OpenAI model to use (default: "gpt-4.1-mini")
+- `--model`: OpenAI model to use (default: "gpt-4o")
 - `--per-type`: Number of contacts per city/type (default: 100)
 - `--delay`: Seconds between API calls (default: 0.6)
 - `--merge`: Merge all existing CSV files into one
 - `--merge-output`: Output file for merged results (default: "merged_contacts.csv")
+- `--find-twitter`: Find missing Twitter accounts for existing contacts
+- `--batch-size`: Number of contacts to process per API call when finding Twitter (default: 20)
 
 ## Partner Types
 
@@ -101,6 +103,7 @@ Each CSV contains these fields:
 - `language`: ISO-2 language code
 - `city`: City name
 - `instagram`: Instagram handle
+- `twitter`: Twitter/X handle
 - `phone`: Phone number (if available)
 - `organization`: Organization or company
 - `type`: Partner type category
@@ -136,6 +139,15 @@ python3 populate.py --merge --merge-output final_contacts.csv
 ### Only merge existing files (no generation)
 ```bash
 python3 populate.py --merge
+```
+
+### Find missing Twitter accounts for existing contacts
+```bash
+# Uses batch processing (20 contacts per API call by default)
+python3 populate.py --find-twitter
+
+# Custom batch size to control API usage
+python3 populate.py --find-twitter --batch-size 30
 ```
 
 ## City Name Matching
