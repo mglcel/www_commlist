@@ -542,7 +542,7 @@ def find_missing_twitter(client: OpenAI, model: str, out_root: str, batch_size: 
     print(f"Found {total} contacts missing Twitter accounts")
 
     if total == 0:
-        print("All contacts already have Twitter accounts or are marked as not_found")
+        print("All contacts already have Twitter accounts or are marked as not_found/not_sure")
         return
 
     # Process in batches to limit API calls
@@ -569,11 +569,14 @@ def find_missing_twitter(client: OpenAI, model: str, out_root: str, batch_size: 
         prompt = (
             "Task: Find Twitter/X handles for the following contacts. Return ONLY a JSON array.\n\n"
             "Contacts:\n" + "\n".join(contact_list) + "\n\n"
-            "Return format: [{\"index\": 1, \"twitter\": \"@username\" or \"not_found\"}, ...]\n"
+            "Return format: [{\"index\": 1, \"twitter\": \"@username\" or \"not_found\" or \"not_sure\"}, ...]\n"
             "Rules:\n"
             "- index: matches the number in the contact list above\n"
-            "- twitter: the Twitter/X handle with @ symbol, or exactly \"not_found\" if no account exists\n"
-            "- Only include verified or clearly identifiable accounts\n"
+            "- twitter: the Twitter/X handle with @ symbol, or exactly \"not_found\" if no account exists, or \"not_sure\" if ambiguous\n"
+            "- Use \"not_sure\" if multiple accounts exist with similar names and you cannot confidently identify the correct one\n"
+            "- Use \"not_sure\" if the account name doesn't match exactly or if organization/context differs\n"
+            "- Only include verified or clearly identifiable accounts that match the person's name, organization, and role\n"
+            "- When in doubt, prefer \"not_sure\" over guessing the wrong account\n"
             "- Return all indices from the list above\n"
         )
 
@@ -604,11 +607,11 @@ def find_missing_twitter(client: OpenAI, model: str, out_root: str, batch_size: 
                     twitter_handle = result.get("twitter", "").strip()
                     contact = batch[idx]
 
-                    if twitter_handle and twitter_handle != "not_found":
+                    if twitter_handle and twitter_handle not in ["not_found", "not_sure"]:
                         contact["row"]["twitter"] = twitter_handle
                         updated_count += 1
                     else:
-                        contact["row"]["twitter"] = "not_found"
+                        contact["row"]["twitter"] = twitter_handle or "not_found"
                         not_found_count += 1
 
             # Write updates back to files
@@ -638,7 +641,7 @@ def find_missing_twitter(client: OpenAI, model: str, out_root: str, batch_size: 
 
         time.sleep(delay)
 
-    print(f"\nCompleted: {updated_count} Twitter accounts found, {not_found_count} marked as not_found")
+    print(f"\nCompleted: {updated_count} Twitter accounts found, {not_found_count} marked as not_found/not_sure")
 
 def main():
     ap = argparse.ArgumentParser(description="Generate city/type partner CSVs with OpenAI")

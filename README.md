@@ -150,6 +150,11 @@ python3 populate.py --find-twitter
 python3 populate.py --find-twitter --batch-size 30
 ```
 
+**Note**: The search marks accounts as:
+- `@username` - Verified match found
+- `not_found` - No Twitter account exists
+- `not_sure` - Multiple similar accounts or ambiguous match (requires manual verification)
+
 ## City Name Matching
 
 When specifying cities with `--cities`, the script matches city names flexibly:
