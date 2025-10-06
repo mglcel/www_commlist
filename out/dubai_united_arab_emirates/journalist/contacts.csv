@@ -1,60 +1,60 @@
-name,email,country,language,city,instagram,phone,organization,type,notes
-Sarmad Khan,,ARE,en,Dubai,@sarmadkhan,,The National,journalist,Covers UAE geopolitics and economy
-Nick Webster,,ARE,en,Dubai,@nickwebster,,The National,journalist,Reports on climate and environment
-Ashleigh Stewart,,ARE,en,Dubai,@ashleighstewart,,The National,journalist,Focuses on Middle East affairs
-Ramola Talwar Badam,,ARE,en,Dubai,@ramolatalwar,,The National,journalist,Writes on UAE environmental issues
-Jennifer Bell,,ARE,en,Dubai,@jenniferbell,,Arabian Business,journalist,Covers health and climate topics
-Simeon Kerr,,ARE,en,Dubai,@simeonkerr,,Financial Times,journalist,Reports on UAE geopolitics
-Saeed Saeed,,ARE,en,Dubai,@saeedsaeed,,The National,journalist,Cultural and environmental reporting
-Naser Al Wasmi,,ARE,en,Dubai,@naserwasmi,,The National,journalist,Focuses on UAE and regional politics
-Anna Zacharias,,ARE,en,Dubai,@annazacharias,,The National,journalist,Writes about UAE society and environment
-John Dennehy,,ARE,en,Dubai,@john_dennehy,,The National,journalist,Covers UAE news and geopolitics
-Rania Khalek,,ARE,en,Dubai,@raniakhalek,,BreakThrough News,journalist,Focuses on Middle East geopolitics
-Faisal Masudi,,ARE,en,Dubai,@faisalmasudi,,Gulf News,journalist,Reports on UAE environmental issues
-Patrick Ryan,,ARE,en,Dubai,@patrickryan,,The National,journalist,Writes on UAE culture and climate
-Ruba Haza,,ARE,en,Dubai,@rubahaza,,The National,journalist,Covers UAE social and environmental topics
-Nick Leech,,ARE,en,Dubai,@nickleech,,The National,journalist,Focuses on UAE architecture and environment
-Daniel Sanderson,,ARE,en,Dubai,@danielsanderson,,The National,journalist,Covers UAE politics and society
-Anna Seaman,,ARE,en,Dubai,@annaseaman,,The National,journalist,Writes on UAE art and environment
-Nick March,,ARE,en,Dubai,@nickmarch,,The National,journalist,Focuses on UAE news and geopolitics
-Rashid Hassan,,ARE,en,Dubai,@rashidhassan,,Arab News,journalist,Covers UAE and regional politics
-Ramola Talwar Badam,,ARE,en,Dubai,@ramolatalwarbadam,,The National,journalist,Writes on climate change and society
-Naser Al Wasmi,,ARE,en,Dubai,@naseralwasmi,,The National,journalist,Covers Middle East politics
-Sophie Prideaux,,ARE,en,Dubai,@sophieprideaux,,The National,journalist,Writes on lifestyle and environment
-James Langton,,ARE,en,Dubai,@jameslangton,,The National,journalist,Covers UAE history and geopolitics
-Faisal Salah,,ARE,en,Dubai,@faisalsalah,,Gulf News,journalist,Reports on technology and environment
-Sarah Algethami,,ARE,en,Dubai,@sarahalgethami,,Bloomberg,journalist,Covers UAE economy and geopolitics
-Rory Jones,,ARE,en,Dubai,@roryjones,,The Wall Street Journal,journalist,Covers UAE business and geopolitics
-Zainab Fattah,,ARE,en,Dubai,@zainabfattah,,Bloomberg,journalist,Reports on UAE economy and politics
-Matthew Martin,,ARE,en,Dubai,@matthew_martin,,Bloomberg,journalist,Covers Middle East finance and geopolitics
-Ayesha Daya,,ARE,en,Dubai,@ayeshadaya,,Bloomberg,journalist,Focuses on energy and environment
-Vivian Nereim,,ARE,en,Dubai,@vivian_nereim,,Bloomberg,journalist,Covers Saudi Arabia and UAE politics
-Archana Narayanan,,ARE,en,Dubai,@archananarayanan,,Bloomberg,journalist,Reports on Middle East finance
-Fiona MacDonald,,ARE,en,Dubai,@fionamacdonald,,Bloomberg,journalist,Covers Middle East politics and society
-Ben Hubbard,,ARE,en,Dubai,@benhubbard,,The New York Times,journalist,Focuses on Middle East politics
-Stanley Carvalho,,ARE,en,Dubai,@stanleycarvalho,,Reuters,journalist,Covers UAE business and finance
-Alexander Cornwell,,ARE,en,Dubai,@alexcornwell,,Reuters,journalist,Reports on aviation and environment
-Lisa Barrington,,ARE,en,Dubai,@lisabarrington,,Reuters,journalist,Covers Middle East politics and society
-Rania El Gamal,,ARE,en,Dubai,@raniaelgamal,,Reuters,journalist,Focuses on energy and environment
-Saeed Azhar,,ARE,en,Dubai,@saeedazhar,,Reuters,journalist,Covers Middle East finance and politics
-Davide Barbuscia,,ARE,en,Dubai,@davidebarbuscia,,Reuters,journalist,Reports on Middle East finance
-Hadeel Al Sayegh,,ARE,en,Dubai,@hadeelalsayegh,,Reuters,journalist,Covers UAE business and politics
-Tuqa Khalid,,ARE,en,Dubai,@tuqakhalid,,Al Arabiya English,journalist,Focuses on Middle East politics
-Caline Malek,,ARE,en,Dubai,@calinemalek,,The National,journalist,Reports on UAE culture and society
-Nada AlTaher,,ARE,en,Dubai,@nadaaltaher,,The National,journalist,Covers environment and sustainability
-Ruba Obaid,,ARE,en,Dubai,@rubaobaid,,Arab News,journalist,Focuses on Middle East culture and society
-Rebecca McLaughlin-Duane,,ARE,en,Dubai,@rebeccamclaughlinduane,,The National,journalist,Covers UAE lifestyle and culture
-Sarwat Nasir,,ARE,en,Dubai,@sarwatnasir,,Khaleej Times,journalist,Covers UAE climate and technology
-Kelly Clarke,,ARE,en,Dubai,@kellyclarke,,Khaleej Times,journalist,Covers UAE health and environment
-Sam Bridge,,ARE,en,Dubai,@sambridge,,Arabian Business,journalist,Reports on UAE business and climate
-Rohma Sadaqat,,ARE,en,Dubai,@rohma_sadaqat,,Khaleej Times,journalist,Writes on UAE business and environment
-Nivriti Butalia,,ARE,en,Dubai,@nivritibutalia,,Khaleej Times,journalist,Covers UAE culture and environment
-Shane McGinley,,ARE,en,Dubai,@shanemcginley,,Arabian Business,journalist,Reports on UAE business and geopolitics
-Jennifer Bell,,ARE,en,Dubai,@jenniferbellj,,Freelance Journalist,journalist,Writes on climate and environment
-Haneen Dajani,,ARE,en,Dubai,@haneendajani,,The National,journalist,Focuses on UAE environmental policies
-Sarah Townsend,,ARE,en,Dubai,@sarahtownsend,,The National,journalist,Reports on UAE climate initiatives
-Nathalie Gillet,,ARE,en,Dubai,@nathaliegillet,,Freelance Journalist,journalist,Writes on climate change
-Evelyn Lau,,ARE,en,Dubai,@evelynclau,,The National,journalist,Focuses on UAE environmental issues
-Rory Reynolds,,ARE,en,Dubai,@roryreynolds,,The National,journalist,Covers geopolitics and environment
-Katy Gillett,,ARE,en,Dubai,@katygillett,,The National,journalist,Focuses on UAE environmental stories
-Daniel Bardsley,,ARE,en,Dubai,@danielbardsley,,The National,journalist,Reports on climate change
+name,email,country,language,city,instagram,twitter,phone,organization,type,notes
+Sarmad Khan,,ARE,en,Dubai,@sarmadkhan,not_sure,,The National,journalist,Covers UAE geopolitics and economy
+Nick Webster,,ARE,en,Dubai,@nickwebster,not_sure,,The National,journalist,Reports on climate and environment
+Ashleigh Stewart,,ARE,en,Dubai,@ashleighstewart,not_sure,,The National,journalist,Focuses on Middle East affairs
+Ramola Talwar Badam,,ARE,en,Dubai,@ramolatalwar,not_sure,,The National,journalist,Writes on UAE environmental issues
+Jennifer Bell,,ARE,en,Dubai,@jenniferbell,not_sure,,Arabian Business,journalist,Covers health and climate topics
+Simeon Kerr,,ARE,en,Dubai,@simeonkerr,not_sure,,Financial Times,journalist,Reports on UAE geopolitics
+Saeed Saeed,,ARE,en,Dubai,@saeedsaeed,not_sure,,The National,journalist,Cultural and environmental reporting
+Naser Al Wasmi,,ARE,en,Dubai,@naserwasmi,not_sure,,The National,journalist,Focuses on UAE and regional politics
+Anna Zacharias,,ARE,en,Dubai,@annazacharias,not_sure,,The National,journalist,Writes about UAE society and environment
+John Dennehy,,ARE,en,Dubai,@john_dennehy,not_sure,,The National,journalist,Covers UAE news and geopolitics
+Rania Khalek,,ARE,en,Dubai,@raniakhalek,not_sure,,BreakThrough News,journalist,Focuses on Middle East geopolitics
+Faisal Masudi,,ARE,en,Dubai,@faisalmasudi,not_sure,,Gulf News,journalist,Reports on UAE environmental issues
+Patrick Ryan,,ARE,en,Dubai,@patrickryan,not_sure,,The National,journalist,Writes on UAE culture and climate
+Ruba Haza,,ARE,en,Dubai,@rubahaza,not_sure,,The National,journalist,Covers UAE social and environmental topics
+Nick Leech,,ARE,en,Dubai,@nickleech,not_sure,,The National,journalist,Focuses on UAE architecture and environment
+Daniel Sanderson,,ARE,en,Dubai,@danielsanderson,not_sure,,The National,journalist,Covers UAE politics and society
+Anna Seaman,,ARE,en,Dubai,@annaseaman,not_sure,,The National,journalist,Writes on UAE art and environment
+Nick March,,ARE,en,Dubai,@nickmarch,not_sure,,The National,journalist,Focuses on UAE news and geopolitics
+Rashid Hassan,,ARE,en,Dubai,@rashidhassan,not_sure,,Arab News,journalist,Covers UAE and regional politics
+Ramola Talwar Badam,,ARE,en,Dubai,@ramolatalwarbadam,not_sure,,The National,journalist,Writes on climate change and society
+Naser Al Wasmi,,ARE,en,Dubai,@naseralwasmi,not_sure,,The National,journalist,Covers Middle East politics
+Sophie Prideaux,,ARE,en,Dubai,@sophieprideaux,not_sure,,The National,journalist,Writes on lifestyle and environment
+James Langton,,ARE,en,Dubai,@jameslangton,not_sure,,The National,journalist,Covers UAE history and geopolitics
+Faisal Salah,,ARE,en,Dubai,@faisalsalah,not_sure,,Gulf News,journalist,Reports on technology and environment
+Sarah Algethami,,ARE,en,Dubai,@sarahalgethami,not_sure,,Bloomberg,journalist,Covers UAE economy and geopolitics
+Rory Jones,,ARE,en,Dubai,@roryjones,not_sure,,The Wall Street Journal,journalist,Covers UAE business and geopolitics
+Zainab Fattah,,ARE,en,Dubai,@zainabfattah,not_sure,,Bloomberg,journalist,Reports on UAE economy and politics
+Matthew Martin,,ARE,en,Dubai,@matthew_martin,not_sure,,Bloomberg,journalist,Covers Middle East finance and geopolitics
+Ayesha Daya,,ARE,en,Dubai,@ayeshadaya,not_sure,,Bloomberg,journalist,Focuses on energy and environment
+Vivian Nereim,,ARE,en,Dubai,@vivian_nereim,not_sure,,Bloomberg,journalist,Covers Saudi Arabia and UAE politics
+Archana Narayanan,,ARE,en,Dubai,@archananarayanan,not_sure,,Bloomberg,journalist,Reports on Middle East finance
+Fiona MacDonald,,ARE,en,Dubai,@fionamacdonald,not_sure,,Bloomberg,journalist,Covers Middle East politics and society
+Ben Hubbard,,ARE,en,Dubai,@benhubbard,not_sure,,The New York Times,journalist,Focuses on Middle East politics
+Stanley Carvalho,,ARE,en,Dubai,@stanleycarvalho,not_sure,,Reuters,journalist,Covers UAE business and finance
+Alexander Cornwell,,ARE,en,Dubai,@alexcornwell,not_sure,,Reuters,journalist,Reports on aviation and environment
+Lisa Barrington,,ARE,en,Dubai,@lisabarrington,not_sure,,Reuters,journalist,Covers Middle East politics and society
+Rania El Gamal,,ARE,en,Dubai,@raniaelgamal,not_sure,,Reuters,journalist,Focuses on energy and environment
+Saeed Azhar,,ARE,en,Dubai,@saeedazhar,not_sure,,Reuters,journalist,Covers Middle East finance and politics
+Davide Barbuscia,,ARE,en,Dubai,@davidebarbuscia,not_sure,,Reuters,journalist,Reports on Middle East finance
+Hadeel Al Sayegh,,ARE,en,Dubai,@hadeelalsayegh,not_sure,,Reuters,journalist,Covers UAE business and politics
+Tuqa Khalid,,ARE,en,Dubai,@tuqakhalid,not_sure,,Al Arabiya English,journalist,Focuses on Middle East politics
+Caline Malek,,ARE,en,Dubai,@calinemalek,not_sure,,The National,journalist,Reports on UAE culture and society
+Nada AlTaher,,ARE,en,Dubai,@nadaaltaher,not_sure,,The National,journalist,Covers environment and sustainability
+Ruba Obaid,,ARE,en,Dubai,@rubaobaid,not_sure,,Arab News,journalist,Focuses on Middle East culture and society
+Rebecca McLaughlin-Duane,,ARE,en,Dubai,@rebeccamclaughlinduane,not_sure,,The National,journalist,Covers UAE lifestyle and culture
+Sarwat Nasir,,ARE,en,Dubai,@sarwatnasir,not_sure,,Khaleej Times,journalist,Covers UAE climate and technology
+Kelly Clarke,,ARE,en,Dubai,@kellyclarke,not_sure,,Khaleej Times,journalist,Covers UAE health and environment
+Sam Bridge,,ARE,en,Dubai,@sambridge,not_sure,,Arabian Business,journalist,Reports on UAE business and climate
+Rohma Sadaqat,,ARE,en,Dubai,@rohma_sadaqat,not_sure,,Khaleej Times,journalist,Writes on UAE business and environment
+Nivriti Butalia,,ARE,en,Dubai,@nivritibutalia,not_sure,,Khaleej Times,journalist,Covers UAE culture and environment
+Shane McGinley,,ARE,en,Dubai,@shanemcginley,not_sure,,Arabian Business,journalist,Reports on UAE business and geopolitics
+Jennifer Bell,,ARE,en,Dubai,@jenniferbellj,not_sure,,Freelance Journalist,journalist,Writes on climate and environment
+Haneen Dajani,,ARE,en,Dubai,@haneendajani,not_sure,,The National,journalist,Focuses on UAE environmental policies
+Sarah Townsend,,ARE,en,Dubai,@sarahtownsend,not_sure,,The National,journalist,Reports on UAE climate initiatives
+Nathalie Gillet,,ARE,en,Dubai,@nathaliegillet,not_sure,,Freelance Journalist,journalist,Writes on climate change
+Evelyn Lau,,ARE,en,Dubai,@evelynclau,not_sure,,The National,journalist,Focuses on UAE environmental issues
+Rory Reynolds,,ARE,en,Dubai,@roryreynolds,not_sure,,The National,journalist,Covers geopolitics and environment
+Katy Gillett,,ARE,en,Dubai,@katygillett,not_sure,,The National,journalist,Focuses on UAE environmental stories
+Daniel Bardsley,,ARE,en,Dubai,@danielbardsley,not_sure,,The National,journalist,Reports on climate change

@@ -1,45 +1,45 @@
-name,email,country,language,city,instagram,phone,organization,type,notes
-Greenpeace Argentina,,AIR,en,Buenos,@greenpeaceargentina,,,ngo,Major environmental NGO with local campaigns
-Fundación Vida Silvestre Argentina,,AIR,en,Buenos,@vidasilvestre,,,ngo,Focus on wildlife and nature conservation
-Amigos de la Tierra Argentina,,AIR,en,Buenos,@amigosdelatierrarg,,,ngo,Environmental justice and sustainability advocacy
-Fundación Ambiente y Recursos Naturales (FARN),,AIR,en,Buenos,@farnargentina,,,ngo,Environmental policy and legal advocacy
-CICODI,,AIR,en,Buenos,@cicodi,,,ngo,Sustainable development and climate action
-Fundación Huerta Niño,,AIR,en,Buenos,@huertanino,,,ngo,Promotes sustainable agriculture in schools
-Banco de Bosques,,AIR,en,Buenos,@bancodebosques,,,ngo,Forest conservation and restoration efforts
-Eco House Global,,AIR,en,Buenos,@ecohouseglobal,,,ngo,Environmental education and activism
-Red de Acción Climática Argentina,,AIR,en,Buenos,@redaccionclimatica,,,ngo,Climate action network in Argentina
-Fundación Patagonia Natural,,AIR,en,Buenos,@patagonianatural,,,ngo,Conservation efforts in Patagonia region
-Aves Argentinas,,AIR,en,Buenos,@avesargentinas,,,ngo,Bird conservation and biodiversity protection
-Fundación ProYungas,,AIR,en,Buenos,@proyungas,,,ngo,Conservation of Yungas forest ecosystem
-Fundación Naturaleza para el Futuro,,AIR,en,Buenos,@naturalezaparaelfuturo,,,ngo,Biodiversity conservation and education
-Fundación Cambio Democrático,,AIR,en,Buenos,@cambiodemocratico,,,ngo,Promotes democratic change and peacebuilding
-Fundación Espacios Verdes,,AIR,en,Buenos,@fundacionespaciosverdes,,,ngo,Environmental education and green spaces advocacy
-Fundación Ambiente y Sociedad,,AIR,en,Buenos,@ambiente_sociedad,,,ngo,Environmental policy and social justice
-Fundación Hábitat y Desarrollo,,AIR,en,Buenos,@habitatydesarrollo,,,ngo,Habitat conservation and sustainable development
-Fundación Proteger,,AIR,en,Buenos,@fundacionproteger,,,ngo,Water resources and wetland conservation
-Fundación R21,,AIR,en,Buenos,@fundacionr21,,,ngo,Environmental awareness and sustainability campaigns
-Fundación Ambiente y Desarrollo Sustentable,,AIR,en,Buenos,@ambiente_desarrollo,,,ngo,Sustainable development and environmental protection
-Fundación Vida y Paz,,AIR,en,Buenos,@fundacionvidaypaz,,,ngo,Peacebuilding and conflict resolution
-Fundación Sustentabilidad Sin Fronteras,,AIR,en,Buenos,@sustentabilidadsinfronteras,,,ngo,Climate change and sustainability advocacy
-Greenpeace Argentina,,AIR,en,Buenos,@greenpeacearg,,,ngo,Prominent environmental NGO.
-Asociación Civil por la Igualdad y la Justicia (ACIJ),,AIR,en,Buenos,@acijargentina,,,ngo,Works on social justice and environmental rights.
-Fundación Ecológica Universal (FEU),,AIR,en,Buenos,@feuargentina,,,ngo,Focuses on sustainable development.
-Cauce - Cultura Ambiental Causa Ecologista,,AIR,en,Buenos,@cauceecologista,,,ngo,Promotes environmental education.
-Fundación Ambiente y Sociedad,,AIR,en,Buenos,@ambientesociedad,,,ngo,Works on environmental justice.
-Fundación R21,,AIR,en,Buenos,@r21argentina,,,ngo,Promotes sustainable development.
-Amnesty International Argentina,,AIR,en,Buenos,@amnistiaar,,,ngo,Human rights and peace advocacy.
-Fundación R21,,AIR,en,Buenos,@r21org,,,ngo,Sustainable development and climate change.
-Fundación Espacios Verdes,,AIR,en,Buenos,@espaciosverdes,,,ngo,Urban green spaces and sustainability.
-Fundación EcoConciencia,,AIR,en,Buenos,@ecoconciencia,,,ngo,Environmental education and awareness.
-Fundación Naturaleza para el Futuro,,AIR,en,Buenos,@naturalezafuturo,,,ngo,Nature conservation and education.
-Fundación Vida,,AIR,en,Buenos,@fundacionvida,,,ngo,Environmental protection and sustainability.
-Fundación Ambiente y Desarrollo,,AIR,en,Buenos,@ambientedesarollo,,,ngo,Environmental development and policy.
-Fundación EcoMujeres,,AIR,en,Buenos,@ecomujeres,,,ngo,Women's role in environmental protection.
-Fundación Naturaleza Viva,,AIR,en,Buenos,@naturalezaviva,,,ngo,Nature conservation and biodiversity.
-Fundación TierraVida,,AIR,en,Buenos,@tierravida,,,ngo,Youth-led climate action.
-Fundación EcoAndina,,AIR,en,Buenos,@ecoandina,,,ngo,Sustainable energy and development.
-Amigos de la Tierra Argentina,,AIR,en,Buenos,@amigosdelatierraba,,Amigos de la Tierra,ngo,Environmental justice and sustainability
-Aves Argentinas,,AIR,en,Buenos,@aves_argentinas,,Aves Argentinas,ngo,Bird conservation and biodiversity
-Fundación Patagonia Natural,,AIR,en,Buenos,@fundacionpatagonianatural,,Fundación Patagonia Natural,ngo,Conservation of Patagonian ecosystems
-Fundación Ambiente y Medio,,AIR,en,Buenos,@ambiente_ymedio,,Fundación Ambiente y Medio,ngo,Environmental media and awareness
-Fundación Ecológica Universal (FEU),,AIR,en,Buenos,@feu_argentina,,Fundación Ecológica Universal,ngo,Environmental protection and sustainable development
+name,email,country,language,city,instagram,twitter,phone,organization,type,notes
+Greenpeace Argentina,,AIR,en,Buenos,@greenpeaceargentina,@GreenpeaceArg,,,ngo,Major environmental NGO with local campaigns
+Fundación Vida Silvestre Argentina,,AIR,en,Buenos,@vidasilvestre,@VidaSilvestreAR,,,ngo,Focus on wildlife and nature conservation
+Amigos de la Tierra Argentina,,AIR,en,Buenos,@amigosdelatierrarg,not_sure,,,ngo,Environmental justice and sustainability advocacy
+Fundación Ambiente y Recursos Naturales (FARN),,AIR,en,Buenos,@farnargentina,@FARNArgentina,,,ngo,Environmental policy and legal advocacy
+CICODI,,AIR,en,Buenos,@cicodi,not_sure,,,ngo,Sustainable development and climate action
+Fundación Huerta Niño,,AIR,en,Buenos,@huertanino,not_sure,,,ngo,Promotes sustainable agriculture in schools
+Banco de Bosques,,AIR,en,Buenos,@bancodebosques,@bancodebosques,,,ngo,Forest conservation and restoration efforts
+Eco House Global,,AIR,en,Buenos,@ecohouseglobal,@EcoHouseGlobal,,,ngo,Environmental education and activism
+Red de Acción Climática Argentina,,AIR,en,Buenos,@redaccionclimatica,not_sure,,,ngo,Climate action network in Argentina
+Fundación Patagonia Natural,,AIR,en,Buenos,@patagonianatural,not_sure,,,ngo,Conservation efforts in Patagonia region
+Aves Argentinas,,AIR,en,Buenos,@avesargentinas,@AvesArgentinas,,,ngo,Bird conservation and biodiversity protection
+Fundación ProYungas,,AIR,en,Buenos,@proyungas,not_sure,,,ngo,Conservation of Yungas forest ecosystem
+Fundación Naturaleza para el Futuro,,AIR,en,Buenos,@naturalezaparaelfuturo,not_sure,,,ngo,Biodiversity conservation and education
+Fundación Cambio Democrático,,AIR,en,Buenos,@cambiodemocratico,not_sure,,,ngo,Promotes democratic change and peacebuilding
+Fundación Espacios Verdes,,AIR,en,Buenos,@fundacionespaciosverdes,not_sure,,,ngo,Environmental education and green spaces advocacy
+Fundación Ambiente y Sociedad,,AIR,en,Buenos,@ambiente_sociedad,not_sure,,,ngo,Environmental policy and social justice
+Fundación Hábitat y Desarrollo,,AIR,en,Buenos,@habitatydesarrollo,not_sure,,,ngo,Habitat conservation and sustainable development
+Fundación Proteger,,AIR,en,Buenos,@fundacionproteger,not_sure,,,ngo,Water resources and wetland conservation
+Fundación R21,,AIR,en,Buenos,@fundacionr21,not_sure,,,ngo,Environmental awareness and sustainability campaigns
+Fundación Ambiente y Desarrollo Sustentable,,AIR,en,Buenos,@ambiente_desarrollo,not_sure,,,ngo,Sustainable development and environmental protection
+Fundación Vida y Paz,,AIR,en,Buenos,@fundacionvidaypaz,not_sure,,,ngo,Peacebuilding and conflict resolution
+Fundación Sustentabilidad Sin Fronteras,,AIR,en,Buenos,@sustentabilidadsinfronteras,not_sure,,,ngo,Climate change and sustainability advocacy
+Greenpeace Argentina,,AIR,en,Buenos,@greenpeacearg,@GreenpeaceArg,,,ngo,Prominent environmental NGO.
+Asociación Civil por la Igualdad y la Justicia (ACIJ),,AIR,en,Buenos,@acijargentina,@acijargentina,,,ngo,Works on social justice and environmental rights.
+Fundación Ecológica Universal (FEU),,AIR,en,Buenos,@feuargentina,not_sure,,,ngo,Focuses on sustainable development.
+Cauce - Cultura Ambiental Causa Ecologista,,AIR,en,Buenos,@cauceecologista,not_sure,,,ngo,Promotes environmental education.
+Fundación Ambiente y Sociedad,,AIR,en,Buenos,@ambientesociedad,not_sure,,,ngo,Works on environmental justice.
+Fundación R21,,AIR,en,Buenos,@r21argentina,not_sure,,,ngo,Promotes sustainable development.
+Amnesty International Argentina,,AIR,en,Buenos,@amnistiaar,@amnistiaar,,,ngo,Human rights and peace advocacy.
+Fundación R21,,AIR,en,Buenos,@r21org,not_sure,,,ngo,Sustainable development and climate change.
+Fundación Espacios Verdes,,AIR,en,Buenos,@espaciosverdes,not_sure,,,ngo,Urban green spaces and sustainability.
+Fundación EcoConciencia,,AIR,en,Buenos,@ecoconciencia,not_sure,,,ngo,Environmental education and awareness.
+Fundación Naturaleza para el Futuro,,AIR,en,Buenos,@naturalezafuturo,not_sure,,,ngo,Nature conservation and education.
+Fundación Vida,,AIR,en,Buenos,@fundacionvida,not_sure,,,ngo,Environmental protection and sustainability.
+Fundación Ambiente y Desarrollo,,AIR,en,Buenos,@ambientedesarollo,not_sure,,,ngo,Environmental development and policy.
+Fundación EcoMujeres,,AIR,en,Buenos,@ecomujeres,not_sure,,,ngo,Women's role in environmental protection.
+Fundación Naturaleza Viva,,AIR,en,Buenos,@naturalezaviva,not_sure,,,ngo,Nature conservation and biodiversity.
+Fundación TierraVida,,AIR,en,Buenos,@tierravida,not_sure,,,ngo,Youth-led climate action.
+Fundación EcoAndina,,AIR,en,Buenos,@ecoandina,not_sure,,,ngo,Sustainable energy and development.
+Amigos de la Tierra Argentina,,AIR,en,Buenos,@amigosdelatierraba,not_sure,,Amigos de la Tierra,ngo,Environmental justice and sustainability
+Aves Argentinas,,AIR,en,Buenos,@aves_argentinas,not_sure,,Aves Argentinas,ngo,Bird conservation and biodiversity
+Fundación Patagonia Natural,,AIR,en,Buenos,@fundacionpatagonianatural,not_sure,,Fundación Patagonia Natural,ngo,Conservation of Patagonian ecosystems
+Fundación Ambiente y Medio,,AIR,en,Buenos,@ambiente_ymedio,not_sure,,Fundación Ambiente y Medio,ngo,Environmental media and awareness
+Fundación Ecológica Universal (FEU),,AIR,en,Buenos,@feu_argentina,not_sure,,Fundación Ecológica Universal,ngo,Environmental protection and sustainable development

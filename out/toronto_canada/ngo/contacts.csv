@@ -1,45 +1,45 @@
-name,email,country,language,city,instagram,phone,organization,type,notes
-Toronto Environmental Alliance,,CAN,en,Toronto,@toenviro,,,ngo,"Advocates for a green, healthy Toronto"
-Environmental Defence Canada,,CAN,en,Toronto,@envirodefence,,,ngo,Focus on climate and clean water
-David Suzuki Foundation,,CAN,en,Toronto,@davidsuzukifdn,,,ngo,Promotes environmental conservation
-Greenpeace Canada,,CAN,en,Toronto,@greenpeace_canada,,,ngo,Global environmental campaigns
-Toronto Wildlife Centre,,CAN,en,Toronto,@torontowildlifecentre,,,ngo,Wildlife rescue and rehabilitation
-Ontario Nature,,CAN,en,Toronto,@ontarionature,,,ngo,Protects wild species and spaces
-Nature Conservancy of Canada,,CAN,en,Toronto,@natureconservancy_ca,,,ngo,Conserves natural areas
-World Wildlife Fund Canada,,CAN,en,Toronto,@wwfcanada,,,ngo,Conservation and environmental protection
-Friends of the Earth Canada,,CAN,en,Toronto,@foecanada,,,ngo,Environmental justice and sustainability
-Ecojustice,,CAN,en,Toronto,@ecojustice_ca,,,ngo,Legal advocacy for the environment
-Toronto Climate Action Network,,CAN,en,Toronto,@tcanetwork,,,ngo,Coalition for climate action
-Climate Action Network Canada,,CAN,en,Toronto,@climateactionca,,,ngo,National climate advocacy
-Sierra Club Canada Foundation,,CAN,en,Toronto,@sierraclubcanada,,,ngo,Environmental advocacy and education
-Green Neighbours Network of Toronto,,CAN,en,Toronto,@greenneighboursnetwork,,,ngo,Community-based environmental action
-Toronto Green Community,,CAN,en,Toronto,@torontogreencommunity,,,ngo,Promotes sustainable urban living
-Pollution Probe,,CAN,en,Toronto,@pollutionprobe,,,ngo,Focus on clean air and water
-Toronto and Region Conservation Authority,,CAN,en,Toronto,@trca_hq,,,ngo,Conserves natural resources
-Wildlife Preservation Canada,,CAN,en,Toronto,@wildlifepreservationca,,,ngo,Conserves endangered species
-Canadian Environmental Law Association,,CAN,en,Toronto,@celaontario,,,ngo,Environmental legal advocacy
-Evergreen Canada,,CAN,en,Toronto,@evergreencanada,,,ngo,Sustainable urban development
-Earth Rangers,,CAN,en,Toronto,@earth_rangers,,,ngo,Youth-focused conservation education
-Canadian Parks and Wilderness Society,,CAN,en,Toronto,@cpaws,,,ngo,Protects Canada's wilderness
-Ontario Clean Air Alliance,,CAN,en,Toronto,@cleanairalliance,,,ngo,Advocates for clean air policies
-Toronto Environmental Volunteers,,CAN,en,Toronto,@toenvirovolunteers,,,ngo,Community environmental projects
-Canadian Association of Physicians for the Environment,,CAN,en,Toronto,@cape_doctors,,,ngo,Health and environmental advocacy
-Toronto Urban Growers,,CAN,en,Toronto,@torontourbangrowers,,,ngo,Promotes urban agriculture
-Green Thumbs Growing Kids,,CAN,en,Toronto,@greenthumbsto,,,ngo,School garden programs
-Toronto Field Naturalists,,CAN,en,Toronto,@torontofieldnaturalists,,,ngo,Nature education and conservation
-Toronto Nature Stewards,,CAN,en,Toronto,@torontonaturestewards,,,ngo,Community nature stewardship
-Canadian Freshwater Alliance,,CAN,en,Toronto,@freshwateralliance,,,ngo,Protects Canada's freshwater resources
-Toronto Green Standard,,CAN,en,Toronto,@torontogreenstandard,,,ngo,Promotes sustainable building practices
-Canadian Institute for Environmental Law and Policy,,CAN,en,Toronto,@cielap,,,ngo,Environmental policy research
-Canadian Environmental Law Association,,CAN,en,Toronto,@cela_ca,,,ngo,Legal advocacy for environmental protection
-Canadian Parks and Wilderness Society,,CAN,en,Toronto,@cpaws_national,,,ngo,Protects parks and wilderness in Toronto area
-Bird Studies Canada,,CAN,en,Toronto,@birdscanada,,,ngo,Bird conservation and research in Toronto
-Green Neighbours Network of Toronto,,CAN,en,Toronto,@greenneighbourstoronto,,,ngo,Community-based environmental action in Toronto
-Cycle Toronto,,CAN,en,Toronto,@cycleto,,,ngo,Advocates for cycling infrastructure in Toronto
-Park People,,CAN,en,Toronto,@parkppl,,,ngo,Supports community park initiatives in Toronto
-Toronto Environmental Volunteers,,CAN,en,Toronto,@to_enviro_volunteers,,,ngo,Volunteer-driven environmental projects in Toronto
-Toronto Nature Stewards,,CAN,en,Toronto,@tonaturestewards,,,ngo,Community stewardship of natural areas in Toronto
-Nature Conservancy of Canada,,CAN,en,Toronto,@naturecanada,,,ngo,Protects natural areas in Canada
-Canadian Environmental Law Association,,CAN,en,Toronto,@cela_facts,,,ngo,Provides legal aid for environmental issues
-Wildlife Preservation Canada,,CAN,en,Toronto,@wildlifepreservationcanada,,,ngo,Conserves endangered species
-Toronto Environmental Volunteers,,CAN,en,Toronto,@torontoenvirovolunteers,,,ngo,Volunteer group for environmental projects
+name,email,country,language,city,instagram,twitter,phone,organization,type,notes
+Toronto Environmental Alliance,,CAN,en,Toronto,@toenviro,@TOenviro,,,ngo,"Advocates for a green, healthy Toronto"
+Environmental Defence Canada,,CAN,en,Toronto,@envirodefence,@envirodefence,,,ngo,Focus on climate and clean water
+David Suzuki Foundation,,CAN,en,Toronto,@davidsuzukifdn,@DavidSuzukiFDN,,,ngo,Promotes environmental conservation
+Greenpeace Canada,,CAN,en,Toronto,@greenpeace_canada,@GreenpeaceCA,,,ngo,Global environmental campaigns
+Toronto Wildlife Centre,,CAN,en,Toronto,@torontowildlifecentre,@TWC_Wildlife,,,ngo,Wildlife rescue and rehabilitation
+Ontario Nature,,CAN,en,Toronto,@ontarionature,@OntarioNature,,,ngo,Protects wild species and spaces
+Nature Conservancy of Canada,,CAN,en,Toronto,@natureconservancy_ca,@NCC_CNC,,,ngo,Conserves natural areas
+World Wildlife Fund Canada,,CAN,en,Toronto,@wwfcanada,@WWFCanada,,,ngo,Conservation and environmental protection
+Friends of the Earth Canada,,CAN,en,Toronto,@foecanada,not_sure,,,ngo,Environmental justice and sustainability
+Ecojustice,,CAN,en,Toronto,@ecojustice_ca,@ecojustice_ca,,,ngo,Legal advocacy for the environment
+Toronto Climate Action Network,,CAN,en,Toronto,@tcanetwork,not_sure,,,ngo,Coalition for climate action
+Climate Action Network Canada,,CAN,en,Toronto,@climateactionca,@CANRacCanada,,,ngo,National climate advocacy
+Sierra Club Canada Foundation,,CAN,en,Toronto,@sierraclubcanada,@SierraClubCAN,,,ngo,Environmental advocacy and education
+Green Neighbours Network of Toronto,,CAN,en,Toronto,@greenneighboursnetwork,not_sure,,,ngo,Community-based environmental action
+Toronto Green Community,,CAN,en,Toronto,@torontogreencommunity,not_sure,,,ngo,Promotes sustainable urban living
+Pollution Probe,,CAN,en,Toronto,@pollutionprobe,@PollutionProbe,,,ngo,Focus on clean air and water
+Toronto and Region Conservation Authority,,CAN,en,Toronto,@trca_hq,@TRCA_HQ,,,ngo,Conserves natural resources
+Wildlife Preservation Canada,,CAN,en,Toronto,@wildlifepreservationca,@WildlifePreserv,,,ngo,Conserves endangered species
+Canadian Environmental Law Association,,CAN,en,Toronto,@celaontario,@CELA_online,,,ngo,Environmental legal advocacy
+Evergreen Canada,,CAN,en,Toronto,@evergreencanada,@EvergreenCanada,,,ngo,Sustainable urban development
+Earth Rangers,,CAN,en,Toronto,@earth_rangers,@earthrangers,,,ngo,Youth-focused conservation education
+Canadian Parks and Wilderness Society,,CAN,en,Toronto,@cpaws,@cpaws,,,ngo,Protects Canada's wilderness
+Ontario Clean Air Alliance,,CAN,en,Toronto,@cleanairalliance,@cleanairallnce,,,ngo,Advocates for clean air policies
+Toronto Environmental Volunteers,,CAN,en,Toronto,@toenvirovolunteers,not_sure,,,ngo,Community environmental projects
+Canadian Association of Physicians for the Environment,,CAN,en,Toronto,@cape_doctors,@CAPE_Doctors,,,ngo,Health and environmental advocacy
+Toronto Urban Growers,,CAN,en,Toronto,@torontourbangrowers,not_sure,,,ngo,Promotes urban agriculture
+Green Thumbs Growing Kids,,CAN,en,Toronto,@greenthumbsto,not_sure,,,ngo,School garden programs
+Toronto Field Naturalists,,CAN,en,Toronto,@torontofieldnaturalists,not_found,,,ngo,Nature education and conservation
+Toronto Nature Stewards,,CAN,en,Toronto,@torontonaturestewards,not_found,,,ngo,Community nature stewardship
+Canadian Freshwater Alliance,,CAN,en,Toronto,@freshwateralliance,@H2OAlliance,,,ngo,Protects Canada's freshwater resources
+Toronto Green Standard,,CAN,en,Toronto,@torontogreenstandard,not_found,,,ngo,Promotes sustainable building practices
+Canadian Institute for Environmental Law and Policy,,CAN,en,Toronto,@cielap,not_found,,,ngo,Environmental policy research
+Canadian Environmental Law Association,,CAN,en,Toronto,@cela_ca,@CELA_ca,,,ngo,Legal advocacy for environmental protection
+Canadian Parks and Wilderness Society,,CAN,en,Toronto,@cpaws_national,@cpaws,,,ngo,Protects parks and wilderness in Toronto area
+Bird Studies Canada,,CAN,en,Toronto,@birdscanada,@BirdsCanada,,,ngo,Bird conservation and research in Toronto
+Green Neighbours Network of Toronto,,CAN,en,Toronto,@greenneighbourstoronto,not_found,,,ngo,Community-based environmental action in Toronto
+Cycle Toronto,,CAN,en,Toronto,@cycleto,@CycleToronto,,,ngo,Advocates for cycling infrastructure in Toronto
+Park People,,CAN,en,Toronto,@parkppl,@Park_People,,,ngo,Supports community park initiatives in Toronto
+Toronto Environmental Volunteers,,CAN,en,Toronto,@to_enviro_volunteers,not_found,,,ngo,Volunteer-driven environmental projects in Toronto
+Toronto Nature Stewards,,CAN,en,Toronto,@tonaturestewards,not_found,,,ngo,Community stewardship of natural areas in Toronto
+Nature Conservancy of Canada,,CAN,en,Toronto,@naturecanada,@NCC_CNC,,,ngo,Protects natural areas in Canada
+Canadian Environmental Law Association,,CAN,en,Toronto,@cela_facts,@CELA_ca,,,ngo,Provides legal aid for environmental issues
+Wildlife Preservation Canada,,CAN,en,Toronto,@wildlifepreservationcanada,@WildlifePresCan,,,ngo,Conserves endangered species
+Toronto Environmental Volunteers,,CAN,en,Toronto,@torontoenvirovolunteers,not_found,,,ngo,Volunteer group for environmental projects

@@ -1,21 +1,21 @@
-name,email,country,language,city,instagram,phone,organization,type,notes
-The Musafir Stories,,IND,hi,Bangalore,@musafirstories,,Travel Podcast,podcaster,Covers sustainable travel and nature
-The Pragati Podcast,,IND,hi,Bangalore,@thinkpragati,,Geopolitics Podcast,podcaster,Discusses geopolitics and policy issues
-The Sandip Roy Show,,IND,hi,Bangalore,@sandiproy,,Cultural Podcast,podcaster,Covers cultural and social issues
-The Seen and the Unseen,,IND,hi,Bangalore,@amitvarma,,Policy Podcast,podcaster,Explores policy and societal issues
-The Filter Koffee Podcast,,IND,hi,Bangalore,@filterkoffee,,Lifestyle Podcast,podcaster,Discusses lifestyle and societal trends
-The Passion People Podcast,,IND,hi,Bangalore,@passionpeoplepodcast,,Inspirational Podcast,podcaster,Features stories of passionate individuals
-The Inspiring Talk,,IND,hi,Bangalore,@theinspiringtalk,,Motivational Podcast,podcaster,Interviews with inspiring personalities
-The Indian Startup Show,,IND,hi,Bangalore,@indianstartupshow,,Entrepreneurship Podcast,podcaster,Focuses on startups and innovation
-The Writer & Geek Show,,IND,hi,Bangalore,@writerandgeek,,Tech and Culture Podcast,podcaster,Covers tech and cultural topics
-IVM Podcasts,,IND,hi,Bangalore,@ivmpodcasts,,Podcast Network,podcaster,Hosts various shows including climate topics
-The Sandip Roy Show,,IND,hi,Bangalore,@sandipr,,Cultural Podcast,podcaster,Covers culture and social issues
-Paisa Vaisa,,IND,hi,Bangalore,@paisavaisa,,Finance Podcast,podcaster,Discusses sustainable finance topics
-The Edges & Sledges Cricket Podcast,,IND,hi,Bangalore,@1tip1hand,,Cricket Podcast,podcaster,Occasionally discusses sports and environment
-The Millennial Athlete,,IND,hi,Bangalore,@millennialathlete,,Sports Podcast,podcaster,Discusses sports and sustainability
-The Habit Coach,,IND,hi,Bangalore,@thehabitcoach,,Lifestyle Podcast,podcaster,Covers sustainable lifestyle habits
-The Intersection,,IND,hi,Bangalore,@intersectionpod,,Science and Society,podcaster,Discusses science and environmental issues.
-The Big Story,,IND,hi,Bangalore,@thequint,,News and Analysis,podcaster,Covers current events and climate news.
-The Musafir Stories,,IND,hi,Bangalore,@musafirstoriespodcast,,The Musafir Stories,podcaster,Explores India's diverse landscapes and cultures
-The Intersection,,IND,hi,Bangalore,@intersectionpodcast,,The Intersection,podcaster,"Discusses science, culture, and history"
-The Real Food Podcast,,IND,hi,Bangalore,@realfoodpodcast,,Real Food Podcast,podcaster,Focuses on sustainable food practices
+name,email,country,language,city,instagram,twitter,phone,organization,type,notes
+The Musafir Stories,,IND,hi,Bangalore,@musafirstories,not_sure,,Travel Podcast,podcaster,Covers sustainable travel and nature
+The Pragati Podcast,,IND,hi,Bangalore,@thinkpragati,not_sure,,Geopolitics Podcast,podcaster,Discusses geopolitics and policy issues
+The Sandip Roy Show,,IND,hi,Bangalore,@sandiproy,not_sure,,Cultural Podcast,podcaster,Covers cultural and social issues
+The Seen and the Unseen,,IND,hi,Bangalore,@amitvarma,not_sure,,Policy Podcast,podcaster,Explores policy and societal issues
+The Filter Koffee Podcast,,IND,hi,Bangalore,@filterkoffee,not_sure,,Lifestyle Podcast,podcaster,Discusses lifestyle and societal trends
+The Passion People Podcast,,IND,hi,Bangalore,@passionpeoplepodcast,not_sure,,Inspirational Podcast,podcaster,Features stories of passionate individuals
+The Inspiring Talk,,IND,hi,Bangalore,@theinspiringtalk,not_sure,,Motivational Podcast,podcaster,Interviews with inspiring personalities
+The Indian Startup Show,,IND,hi,Bangalore,@indianstartupshow,not_sure,,Entrepreneurship Podcast,podcaster,Focuses on startups and innovation
+The Writer & Geek Show,,IND,hi,Bangalore,@writerandgeek,not_sure,,Tech and Culture Podcast,podcaster,Covers tech and cultural topics
+IVM Podcasts,,IND,hi,Bangalore,@ivmpodcasts,not_sure,,Podcast Network,podcaster,Hosts various shows including climate topics
+The Sandip Roy Show,,IND,hi,Bangalore,@sandipr,not_sure,,Cultural Podcast,podcaster,Covers culture and social issues
+Paisa Vaisa,,IND,hi,Bangalore,@paisavaisa,not_sure,,Finance Podcast,podcaster,Discusses sustainable finance topics
+The Edges & Sledges Cricket Podcast,,IND,hi,Bangalore,@1tip1hand,not_sure,,Cricket Podcast,podcaster,Occasionally discusses sports and environment
+The Millennial Athlete,,IND,hi,Bangalore,@millennialathlete,not_sure,,Sports Podcast,podcaster,Discusses sports and sustainability
+The Habit Coach,,IND,hi,Bangalore,@thehabitcoach,not_sure,,Lifestyle Podcast,podcaster,Covers sustainable lifestyle habits
+The Intersection,,IND,hi,Bangalore,@intersectionpod,not_sure,,Science and Society,podcaster,Discusses science and environmental issues.
+The Big Story,,IND,hi,Bangalore,@thequint,@TheQuint,,News and Analysis,podcaster,Covers current events and climate news.
+The Musafir Stories,,IND,hi,Bangalore,@musafirstoriespodcast,@musafirstories,,The Musafir Stories,podcaster,Explores India's diverse landscapes and cultures
+The Intersection,,IND,hi,Bangalore,@intersectionpodcast,not_sure,,The Intersection,podcaster,"Discusses science, culture, and history"
+The Real Food Podcast,,IND,hi,Bangalore,@realfoodpodcast,not_sure,,Real Food Podcast,podcaster,Focuses on sustainable food practices
